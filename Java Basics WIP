@@ -1,1 +1,33 @@
+// Putting text on screen.
+// Printing text. Printing text in java is pretty simple. You can print in quotation marks. 
+// Make sure you put a semi colon at the end of a Command so it knows to stop at that point.
+// Numbers dont need to be in quotes.
 
+System.out.print( "Hello" );
+System.out.print(52);
+
+// Integer or int
+// An integer is a number stored as a value. If 1 + 2 = 3, 3 is the integer. It is not as confusing as it sounds.
+// Integers dont need to be typed in quotes. They are numbers. An integer can only be a number between -2,147,483,647 and 2,147,483,647.
+
+System.out.print(2 + 10);
+System.out.print(-2147483647 + 2147483647);
+
+// Booleans
+// A boolean can only be true or false. Or on and off. Or 1 or 0. Its either true or false.
+
+System.out.print(true);
+
+// Char
+// A char can only be a Single letter in Single quotes.
+
+System.out.print('g');
+
+// Variables
+// Variables are very common in Java. A variable stores a value. You can make something a Integer, Boolean, or a Char. These are all valid types of variables
+// Make sure you put the kind of variables that it is (Boolean, Int, or Char) before you assign it.\
+// This function stores a value that you can use later down the line. So for instance, myNumber1 + myNumber2. You can do this and other stuff in Java
+
+int myNumber = 7;
+boolean iAmCool = true;
+char movieRating = 'G';
