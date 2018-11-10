@@ -6,9 +6,15 @@
 System.out.print( "Hello" );
 System.out.print(52);
 
+// There are 2 kinds of printing in Java. You can do System.out.print(2 + 2); and System.out.println(2 + 2); . The difference between them is that if you use 
+// System.out.println();, It will print true or false and then, all the code after it will print onto the next line. (ln = Line).
+
+System.out.println(1 + 1);
+
 // Integer or int
 // An integer is a number stored as a value. If 1 + 2 = 3, 3 is the integer. It is not as confusing as it sounds.
 // Integers dont need to be typed in quotes. They are numbers. An integer can only be a number between -2,147,483,647 and 2,147,483,647.
+// If you put a number or problem in quotes, it will print out whatever you typed inbetween those quotes.
 
 System.out.print(2 + 10);
 System.out.print(-2147483647 + 2147483647);
@@ -28,6 +34,54 @@ System.out.print('g');
 // Make sure you put the kind of variables that it is (Boolean, Int, or Char) before you assign it.\
 // This function stores a value that you can use later down the line. So for instance, myNumber1 + myNumber2. You can do this and other stuff in Java
 
+int number = 6;
 int myNumber = 7;
 boolean iAmCool = true;
 char movieRating = 'G';
+
+// Comments.
+// Comments (As you can see here) are things that humans are meant to read. The computer does nothing to whatevery I type after the 2 slashes.
+// if you want a multi-line comment you to a /* and end it with a */ . Eveyrthing typed in a comment is not looked at by java.
+
+// Math.
+// Math can be used in a lot of ways. Addtion +, Subraction -, Multiplication *, and Division /.
+// These can all be used in a bunch of ways.
+
+int sum = 23 + 54;
+int difference = 202 - 91;
+int product = 2 * 8;
+int quotient = 15 / 3;
+
+// Another instance of doing math is adding Integers together.
+
+int myOtherNumber = number + myNumber;
+
+System.out.print(myOtherNumber);
+
+// More Math
+// We have a Modulo. A modulo is basically a remainder. So for instance 15 % 6 would give you the answer of 3 because 6 goes into 15 2 times with a remainder of 3.
+
+int myModulo = 15 % 6;
+
+// This kind of falls under tha category of math so I thought I would put it here
+
+// Relational Operators
+// Relational Operators are basically greater then or less than. It makes sense when you see it. Here are the symbols used. <, >, <=, and >= .
+// It prints a true or false value.
+// You dont need to use System.out.println(); here, I just do it for the simplicity.
+
+System.out.println(5 < 7);
+System.out.println(8 > 4);
+System.out.println(9 >= 10);
+System.out.println(11 <= 12);
+
+// You can also make use of these symbols with Booleans.
+
+boolean myRO = number <= myOtherNumber;
+System.out.print(myRO);
+
+// Equality Operators
+// Still in the math category here. WE have Equality Operators. Equality Operators compare things. == Means equal to. != Means not equal to.
+
+boolean myEO = myModulo == myNumber;
+System.out.print(myEO);
