@@ -45,7 +45,7 @@ char movieRating = 'G';
 
 // Math.
 // Math can be used in a lot of ways. Addtion +, Subraction -, Multiplication *, and Division /.
-// These can all be used in a bunch of ways.
+// These can all be used in ways that dont make sanse right now.
 
 int sum = 23 + 54;
 int difference = 202 - 91;
@@ -82,6 +82,97 @@ System.out.print(myRO);
 
 // Equality Operators
 // Still in the math category here. WE have Equality Operators. Equality Operators compare things. == Means equal to. != Means not equal to.
+// The Equality Operator only prints out True or False.
 
 boolean myEO = myModulo == myNumber;
 System.out.print(myEO);
+
+// Boolean Operators
+
+//  The And operator. The and operator checks if 2 things are true. The and operator looks like this && .
+
+System.out.print(true && true);   // This prints true because both things we are comparing are true.
+System.out.print(false && true);  // Prints our false because both things aren't true.
+System.out.print(5 > 3 && 4 < 8); // This will print out true once again, because both give a true value
+
+//  The next Boolean operator we have is the Or operator. If either side of the expression is true, It will trint true. But if both are false, It with print false.
+//  The Or operator is represented by this || . It is right above the enter key if you cant find it.
+
+System.out.println(true || true);
+
+//  The final boolean operator we will be looking at is the Not operator. It prints the opposite of what it should print. The Not operator is represented by a ! .
+
+System.out.print(!true); // This will return false because the opposite of true is false.
+System.out.print( !(3 > 5) ); // This expression will print True because 3 > 5 is false.
+
+//  The final thing we will talk about boolean is Order of operations. (in boolean at least). So, First the Not operator is activated. Then the And operator.
+//  Then the Or operator. Let me show you an example
+
+System.out.print( !(false) || true && false); // Thie returns true. First ! makes it retuen true. Then the && returnes false. Then, the || finally returns true.
+
+// WOAH boy we just got through the tough easy stages. Now for some more complex stuff. I do have to say IF (hehe) you have made something useful with what you have
+// learned thats great. I can't do that stuff lmao. Anyways, We are going to get started on If statements. Pretty cool stuff if you ask me. Here we go.
+
+// If statements.
+// If statements are pretty self explanitory but I am going to break them down anyways. An If statement Basically says if this = this, do this.
+// 
+
+if ( 2 < 4 ) { 
+  
+  System.out.print(" Hey, 4 is greater than 2 isn't it? ");
+  
+}
+
+// Great. The if statement is pretty cool. BUT, what if the answer is false. What happens then? Well, we have the If-Else statement. The If-Else statement means what
+// you think it means.
+
+if ( 5 > 7 ) {
+  
+  System.out.print("Hey. That adds up doesn't it? ");
+
+} else {
+ 
+  System.out.print("That doesnt add up. Try again!");
+
+}
+
+// It makes sense to me!. I really dont know why I am trying to appeal to kids. Anyways, This is what an if and If-Else statement does.
+// Just when it starts to make sense we have to go and make it confusing again. Here we have the...
+
+// If-ElseIf-Else Statement. You heard me right. The If-ElseIf-Else statement. So, what does this apply to? let me show you.
+
+if ( 123 > 132 ) {
+  
+  System.out.println("Hey! I can't think of anything to put here! ");
+  
+} else if ( 20 > 19 ){
+  
+  System.out.println("I am really not liking to have to come up with stuff to put here");
+
+// Okay. Im gonna have a break with this code for a second to tell you something. When the IF statement is wrong, you can put a If-Else statement, or a If-ElseIf-Else
+// Statement. But, what happens if the If-ElseIf-Else statement fails? well, we have a If-Else statement for the If-ElseIf-Else statement. I am just trying to confuse you
+// at this point. It is really simple. Lets continue with this code.
+
+} else {
+  
+  System.out.println("Just no.");
+  
+}
+
+// This means, when the If statement is false, it goes to the If-ElseIf-Else statement. If that comes out as false, it playes the If-Else statement.
+// I hope this all makes sense
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
