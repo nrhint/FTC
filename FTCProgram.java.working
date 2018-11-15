@@ -49,8 +49,6 @@ public class FTCProgram extends LinearOpMode {
     private DcMotor BackRight = null;
     private DcMotor BackLeft = null;
     private DcMotor Arm = null;
-    //Servos:
-    private Servo Hand = null;
 
     //Speed vars for the motors
     double FrontLeftSpeed = 0;
@@ -58,7 +56,6 @@ public class FTCProgram extends LinearOpMode {
     double BackLeftSpeed = 0;
     double BackRightSpeed = 0;
     double ArmSpeed = 0;
-    double HandPos = 0;
     
     @Override
     public void runOpMode() {
@@ -74,8 +71,7 @@ public class FTCProgram extends LinearOpMode {
         BackLeft.setDirection(DcMotor.Direction.REVERSE);
         Arm = hardwareMap.get(DcMotor.class, "m4");
         Arm.setDirection(DcMotor.Direction.FORWARD);
-        //Setup Servos
-        Hand = hardwareMap.get(Servo.class, "s0");
+        
         
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
@@ -83,13 +79,11 @@ public class FTCProgram extends LinearOpMode {
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
             //Main loop:
-            FrontLeftSpeed = gamepad1.right_stick_y;
-            BackLeftSpeed = gamepad1.right_stick_y;
-            FrontRightSpeed = gamepad1.left_stick_y;
-            BackRightSpeed = gamepad1.left_stick_y;
+            FrontLeftSpeed = gamepad1.left_stick_y;
+            BackLeftSpeed = gamepad1.left_stick_y;
+            FrontRightSpeed = gamepad1.right_stick_y;
+            BackRightSpeed = gamepad1.right_stick_y;
             ArmSpeed = gamepad2.right_stick_y;
-            HandPos += gamepad2.left_stick_y/100;
-            
             
             //Write the speeds to the motors.
             FrontLeft.setPower(FrontLeftSpeed);
@@ -97,13 +91,9 @@ public class FTCProgram extends LinearOpMode {
             BackLeft.setPower(BackLeftSpeed);
             BackRight.setPower(BackRightSpeed);
             Arm.setPower(ArmSpeed);
-            Hand.setPosition(HandPos);
-            
             
             
             telemetry.addData("Status", "Running");
-            telemetry.addData("HandPos = ", HandPos);
-            telemetry.addData("Math.Max", Math.max(1.00, HandPos));
             telemetry.update();
 
         }
