@@ -46,6 +46,8 @@ public class FTCProgram extends LinearOpMode {
     //Motors:
     private DcMotor FrontRight = null;
     private DcMotor FrontLeft = null;
+    private DcMotor MidRight = null;
+    private DcMotor MidLeft = null;
     private DcMotor BackRight = null;
     private DcMotor BackLeft = null;
     private DcMotor Arm = null;
@@ -55,10 +57,15 @@ public class FTCProgram extends LinearOpMode {
     //Speed vars for the motors
     double FrontLeftSpeed = 0;
     double FrontRightSpeed = 0;
+    double MidLeftSpeed = 0;
+    double MidRightSpeed = 0;
     double BackLeftSpeed = 0;
     double BackRightSpeed = 0;
     double ArmSpeed = 0;
     double HandPos = 0;
+    //Vars for speed controlls
+    double RightTrigger = 0;
+    double LeftTrigger = 0;
     
     @Override
     public void runOpMode() {
@@ -74,26 +81,40 @@ public class FTCProgram extends LinearOpMode {
         BackLeft.setDirection(DcMotor.Direction.REVERSE);
         Arm = hardwareMap.get(DcMotor.class, "m4");
         Arm.setDirection(DcMotor.Direction.FORWARD);
+        MidRight = hardwareMap.get(DcMotor.class, "m6");
+        MidRight.setDirection(DcMotor.Direction.FORWARD);
+        MidLeft = hardwareMap.get(DcMotor.class, "m5");
+        MidLeft.setDirection(DcMotor.Direction.REVERSE);
         //Setup Servos
         Hand = hardwareMap.get(Servo.class, "s0");
-        
         // Wait for the game to start (driver presses PLAY)
+        //Attonimus  code:?
+        
         waitForStart();
 
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
             //Main loop:
-            FrontLeftSpeed = gamepad1.right_stick_y;
-            BackLeftSpeed = gamepad1.right_stick_y;
-            FrontRightSpeed = gamepad1.left_stick_y;
-            BackRightSpeed = gamepad1.left_stick_y;
+            //get the buper stat
+            LeftTrigger = gamepad1.left_trigger+1;
+            RightTrigger = gamepad1.right_trigger+1;
+            FrontLeftSpeed = gamepad1.right_stick_y/4*RightTrigger*LeftTrigger;
+            MidLeftSpeed = gamepad1.right_stick_y/4*RightTrigger*LeftTrigger;
+            BackLeftSpeed = gamepad1.right_stick_y/4*RightTrigger*LeftTrigger;
+            FrontRightSpeed = gamepad1.left_stick_y/4*RightTrigger*LeftTrigger;
+            MidRightSpeed = gamepad1.left_stick_y/4*RightTrigger*LeftTrigger;
+            BackRightSpeed = gamepad1.left_stick_y/4*RightTrigger*LeftTrigger;
             ArmSpeed = gamepad2.right_stick_y;
-            HandPos += gamepad2.left_stick_y/100;
-            
+            HandPos += gamepad2.left_stick_y/100*-1;
+            //Bind HandPos between 0 and 1:
+            if (HandPos > 1){HandPos = 1;}
+            else if (HandPos < 0){HandPos=0;}
             
             //Write the speeds to the motors.
             FrontLeft.setPower(FrontLeftSpeed);
             FrontRight.setPower(FrontRightSpeed);
+            MidLeft.setPower(MidLeftSpeed);
+            MidRight.setPower(MidRightSpeed);
             BackLeft.setPower(BackLeftSpeed);
             BackRight.setPower(BackRightSpeed);
             Arm.setPower(ArmSpeed);
@@ -103,7 +124,6 @@ public class FTCProgram extends LinearOpMode {
             
             telemetry.addData("Status", "Running");
             telemetry.addData("HandPos = ", HandPos);
-            telemetry.addData("Math.Max", Math.max(1.00, HandPos));
             telemetry.update();
 
         }
