@@ -1,0 +1,3 @@
+Get sensors for the robot:
+Gyro sensor
+Encoders?
