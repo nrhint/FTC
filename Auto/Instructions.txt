@@ -1,0 +1,26 @@
+Nathan Hinton 11/29/2018
+
+This is what I have done to setup the auto code and make t work hopefuly.  I installed Android studio in the home dirrectory of my computer.  I went to https://github.com/ftctechnh/ftc_app to download the sdk fot FTC.  Now I need to figure out how to load it into Android studio.
+
+1. I extracted the file to Home/Android.
+2. I imported it with the startup screen of Android Studio.
+3. You can also import it through the menu of the main application through  File > New > Import Project.
+
+Here are some links that I used:
+
+http://paws.kettering.edu/~webe3546/FTCJavaProgramming.pdf
+
+
+Starting a project with this video as a guide:
+https://www.youtube.com/watch?annotation_id=annotation_2471822379&feature=iv&src_vid=MF95VsrBGBk&v=uTjYo9w0TaY
+https://www.youtube.com/watch?v=kOapppDNlSA
+
+Created AutoCode folder under ftc_app-master
+
+
+Looking at the code from the sample I think that I could have done the programing in the ap itself.  I will look into this now.
+
+Also it looks like using a state machine will be the best way or at least learning how to define and call sub functions in java will be useful.
+
+
+This will work.  I am uploading a program called AtomTest to git and this willl have a basic program.  
