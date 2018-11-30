@@ -1,0 +1,22 @@
+Nathan Hinton
+
+This is a fie where all of the motor names are places with the location and function on the robot.
+
+m0:  Front right motor: Driving
+m1:  Front left motor: Driving
+m2:  Back right motor: Driving
+m3:  Back left motor: Driving
+m4:  Arm: Lifting
+m5:  Middle right motor: Driving
+m6:  Middle left motor: Driving
+m7:  (Lifting motor, not implemented.)
+
+s0:  Lift: Picking up the pieces
+s1:
+s2:
+s3:
+s4:
+s5:
+s6:
+s7:
+s8:
