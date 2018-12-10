@@ -113,27 +113,24 @@ public class AtomTest extends LinearOpMode {
 
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
-
+/*
+Here are importiant vars:
+deg to in = 7.5
+48 inches is 360 deg turn.
+*/
         // Step through each leg of the path,
         // Note: Reverse movement is obtained by setting a negative distance (not speed)
-        /*
+        
         //Drive in square
-        int turn = 18;
-        for (int i = 0; i<4; i ++){
-            encoderDrive(DRIVE_SPEED,  24,  24, 3);
-            encoderDrive(TURN_SPEED, turn, -turn, 3);
+        int turn = 12;
+        int distance = 24;
+        for (int i = 0; i<8; i ++){
+            encoderDrive(DRIVE_SPEED,  distance,  distance, 10);
+            encoderDrive(TURN_SPEED, turn, -turn, 10);
         }
-        for (int i = 0; i<4; i ++){
-            encoderDrive(DRIVE_SPEED,  -24,  -24, 3);
-            encoderDrive(TURN_SPEED, -turn, turn, 3);
-        }
-        */
-        int turn = 18;
-        encoderDrive(TURN_SPEED, -turn, turn, 10);
         //encoderDrive(DRIVE_SPEED,  48,  48, 3);  // S1: Forward 48 Inches with 5 Sec timeout
         //encoderDrive(TURN_SPEED,   12, -12, 4.0);  // S2: Turn Right 12 Inches with 4 Sec timeout
         //encoderDrive(DRIVE_SPEED, -48, -48, 3);  // S3: Reverse 24 Inches with 4 Sec timeout
-        sleep(10000);
 
 //        robot.leftClaw.setPosition(1.0);            // S4: Stop and close the claw.
 //        robot.rightClaw.setPosition(0.0);

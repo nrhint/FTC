@@ -71,6 +71,7 @@ public class FTCProgram extends LinearOpMode {
     public void runOpMode() {
         telemetry.addData("Status", "Initialized");
         telemetry.update();
+        /*
         FrontRight = hardwareMap.get(DcMotor.class, "m0");
         FrontRight.setDirection(DcMotor.Direction.FORWARD);
         FrontLeft = hardwareMap.get(DcMotor.class, "m1");
@@ -85,6 +86,20 @@ public class FTCProgram extends LinearOpMode {
         MidRight.setDirection(DcMotor.Direction.FORWARD);
         MidLeft = hardwareMap.get(DcMotor.class, "m5");
         MidLeft.setDirection(DcMotor.Direction.REVERSE);
+        */
+        BackLeft = hardwareMap.get(DcMotor.class, "m0");
+        MidLeft = hardwareMap.get(DcMotor.class, "m1");
+        FrontLeft = hardwareMap.get(DcMotor.class, "m2");
+        BackRight = hardwareMap.get(DcMotor.class, "m3");
+        MidRight = hardwareMap.get(DcMotor.class, "m4");
+        FrontRight = hardwareMap.get(DcMotor.class, "m5");
+        Arm = hardwareMap.get(DcMotor.class, "m6");
+        
+        FrontRight.setDirection(DcMotor.Direction.REVERSE);
+        MidRight.setDirection(DcMotor.Direction.REVERSE);
+        BackRight.setDirection(DcMotor.Direction.REVERSE);
+        
+        
         //Setup Servos
         Hand = hardwareMap.get(Servo.class, "s0");
         // Wait for the game to start (driver presses PLAY)
