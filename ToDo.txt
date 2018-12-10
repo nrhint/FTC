@@ -1,3 +1,3 @@
 Get sensors for the robot:
 Gyro sensor
-Encoders?
+Encoders?  Yes there are encoders.
