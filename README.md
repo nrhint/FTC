@@ -1,5 +1,13 @@
 I am appending data from the top down.  The most recent things are at the top.
 
+
+PROBLEM:
+the wheels dont turn the same way when turning or driving
+
+SOLUTION:
+I think that the motors are set to the wrong motors.
+
+
 The ratio from deg to inches is 7.5 deg = 1 inch
 360deg turn = 48 inches
 
