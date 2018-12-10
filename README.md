@@ -1,5 +1,8 @@
 I am appending data from the top down.  The most recent things are at the top.
 
+I rewired all the motors to the left are 0-2 , the right are 3-5 and the arm is 6
+Now the program works and I have fixed the dirrections.
+
 
 PROBLEM:
 the wheels dont turn the same way when turning or driving
