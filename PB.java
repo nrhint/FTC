@@ -53,15 +53,15 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 public class PB
 {
     /* Public OpMode members. */
-    public DcMotor  leftDrive1   = null;
-    public DcMotor  leftDrive2   = null;
-    public DcMotor  leftDrive3   = null;
-    public DcMotor  rightDrive1  = null;
-    public DcMotor  rightDrive2  = null;
-    public DcMotor  rightDrive3  = null;
-    public DcMotor  leftArm     = null;
-    public Servo    hand    = null;
-    public Servo    rightClaw   = null;
+    public DcMotor  FrontRight   = null;
+    public DcMotor  FrontLeft   = null;
+    public DcMotor  RearRight   = null;
+    public DcMotor  RearLeft  = null;
+  //  public DcMotor  test  = null;
+    //public DcMotor  rightDrive3  = null;
+    //public DcMotor  leftArm     = null;
+    //public Servo    hand    = null;
+    //public Servo    rightClaw   = null;
 
     public static final double MID_SERVO       =  0.5 ;
     public static final double ARM_UP_POWER    =  0.45 ;
@@ -82,46 +82,46 @@ public class PB
         hwMap = ahwMap;
 
         // Define and Initialize Motors
-        leftDrive1  = hwMap.get(DcMotor.class, "m0");
-        leftDrive2  = hwMap.get(DcMotor.class, "m1");
-        leftDrive3  = hwMap.get(DcMotor.class, "m2");
-        rightDrive1 = hwMap.get(DcMotor.class, "m3");
-        rightDrive2 = hwMap.get(DcMotor.class, "m4");
-        rightDrive3 = hwMap.get(DcMotor.class, "m5");
-        leftArm    = hwMap.get(DcMotor.class, "m6");
-        leftDrive1.setDirection(DcMotor.Direction.REVERSE); // Set to REVERSE if using AndyMark motors
-        leftDrive2.setDirection(DcMotor.Direction.REVERSE); // Set to REVERSE if using AndyMark motors
-        leftDrive3.setDirection(DcMotor.Direction.REVERSE); // Set to REVERSE if using AndyMark motors
-        rightDrive1.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
-        rightDrive2.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
-        rightDrive3.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
+        FrontRight  = hwMap.get(DcMotor.class, "frontRight");
+        FrontLeft  = hwMap.get(DcMotor.class, "frontLeft");
+        RearRight  = hwMap.get(DcMotor.class, "rearRight");
+        RearLeft = hwMap.get(DcMotor.class, "rearLeft");
+        //rightDrive2 = hwMap.get(DcMotor.class, "m4");
+        //rightDrive3 = hwMap.get(DcMotor.class, "m5");
+        //leftArm    = hwMap.get(DcMotor.class, "m6");
+        FrontRight.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
+        FrontLeft.setDirection(DcMotor.Direction.REVERSE); // Set to REVERSE if using AndyMark motors
+        RearRight.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
+        RearLeft.setDirection(DcMotor.Direction.REVERSE);// Set to FORWARD if using AndyMark motors
+        //rightDrive2.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
+        //rightDrive3.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
 
         // Set all motors to zero power
-        leftDrive1.setPower(0);
-        leftDrive2.setPower(0);
-        leftDrive3.setPower(0);
-        rightDrive1.setPower(0);
-        rightDrive2.setPower(0);
-        rightDrive3.setPower(0);
-        leftArm.setPower(0);
+        FrontRight.setPower(0);
+        FrontLeft.setPower(0);
+        RearRight.setPower(0);
+        RearLeft.setPower(0);
+        //rightDrive2.setPower(0);
+        //rightDrive3.setPower(0);
+        //leftArm.setPower(0);
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
-        leftDrive1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+/*        leftDrive1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         leftDrive2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         leftDrive3.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightDrive1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightDrive2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightDrive3.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        leftArm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        leftArm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);*/
 
         // Define and initialize ALL installed servos.
-        hand = hwMap.get(Servo.class, "s0");
+        //hand = hwMap.get(Servo.class, "s0");
         //leftClaw  = hwMap.get(Servo.class, "left_hand");
         //rightClaw = hwMap.get(Servo.class, "right_hand");
         //leftClaw.setPosition(MID_SERVO);
         //rightClaw.setPosition(MID_SERVO);
-        hand.setPosition(MID_SERVO);
+        //hand.setPosition(MID_SERVO);
     }
  }
 

@@ -2,21 +2,39 @@ Nathan Hinton
 
 This is a fie where all of the motor names are places with the location and function on the robot.
 
-m0:  Front right motor: Driving
-m1:  Front left motor: Driving
-m2:  Back right motor: Driving
-m3:  Back left motor: Driving
-m4:  Arm: Lifting
-m5:  Middle right motor: Driving
-m6:  Middle left motor: Driving
-m7:  (Lifting motor, not implemented.)
+Hub 1: Front motors
+P0: Front Right
+P1: Front Left
+P2: 
+P3: 
 
-s0:  Lift: Picking up the pieces
-s1:
-s2:
-s3:
-s4:
-s5:
-s6:
-s7:
-s8:
+Hub 2: Rear motors
+P0: 
+P1: 
+P2 Back Right
+P3 Back Left
+
+LOG FOR TURNING
+To turn the robot about 120 deg turn = 12
+
+32<360deg>36
+hypo:
+A 90 deg turn is = 9 therefore 360 = 36
+result:
+36 = 1 1/8 turn
+
+hypo:
+a 360 = 32 therefor 90 = 8:
+result:
+about 15 deg shore of a full turn
+
+hypo:
+a 360 = 33.4 therefore 90 = 8.35
+result:
+
+
+hypo:
+
+result:
+
+
